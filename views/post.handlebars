@@ -2,7 +2,37 @@
   <h2>{{title}}</h2>
   <p>{{content}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
-  <p> Add comment section
-    <button class="btn btn-primary">Fund this Project!</button>
-  </p>
 </div>
+
+{{!-- {{#if comments.length}}
+<div class="row mb-4 post"></div>
+  {{#each comments as |comment| }}
+  <div class="col-md-5">
+    <p>{{comment.comment}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      by {{comment.user.name}} 
+      on {{format_date comment.date_created}}
+    </p>
+  </div>
+  {{/each}}
+</div>
+{{/if}} --}}
+
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <form class="form new-comment-form">
+      <div class="form-group">
+        <label for="comment-comment">Add a comment:</label>
+        <textarea class="form-input" id="comment-comment" name="comment-comment"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{!-- <script src="./js/post.js"></script> --}}

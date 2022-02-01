@@ -31,10 +31,20 @@ router.get('/post/:id', withAuth, async (req, res) => {
       ],
     });
 
+    const commentData = await Post.findByPk(req.params.id, {
+        include: [
+          {
+            model: Comment,
+            attributes: ['comment', 'date_created'],
+          },
+        ],
+      });
+
     const post = postData.get({ plain: true });
+    const comment = commentData.get({ plain: true });
 
     res.render('post', {
-      ...post,
+      ...post, ...comment,
       logged_in: req.session.logged_in
     });
   } catch (err) {
