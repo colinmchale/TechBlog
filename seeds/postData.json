@@ -1,0 +1,23 @@
+[
+  {
+    "title": "My First Blog Post",
+    "content": "Not sure what to say but happy to be here and share my thoughts",
+    "user_id": 1
+  },
+  {
+    "title": "Crazy Story Right Here",
+    "content": "Don't have anyhting yet, but i promise one day this will turn into something crazy",
+    "user_id": 2
+  },
+  {
+    "title": "A very average post",
+    "content": "Nothing special really, just straight to the point",
+    "user_id": 3
+  },
+  {
+    "title": "Blog Post",
+    "content": "And then this is all my content that goes with the title I put",
+    "user_id": 4
+  }
+]
+  
